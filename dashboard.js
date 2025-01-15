@@ -96,10 +96,10 @@ sideNav.style.right = "-240px";
 menuBtn.onclick = function () {
   if (sideNav.style.right == "-240px") {
     sideNav.style.right = "0";
-    menu.src = "Images/close.png";
+    menu.src = "close.png";
   } else {
     sideNav.style.right = "-240px";
-    menu.src = "Images/menu.png";
+    menu.src = "menu.png";
   }
 };
 
