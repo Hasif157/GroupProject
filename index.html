@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Dashboard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dashboard.css">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css"> 
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div id="header-logo">
-      <a href="index.html"><img src="logo.png" alt="Logo" /></a>
+    <section id="banner">
+        <img src="logo.png" alt="" class="logo">
+        <div class="banner-text">
+        <h1>SportEZ</h1>
+        <p>SportEZ is a one-stop shariah shop for all your sports equipment and accessories. </p>
+        <div class="banner-btn">
+            <a href="dashboard.html"><span></span>Explore More</a>
     </div>
-    <!-- SEARCH SECTION -->
-    <input type="text" id="search-bar" placeholder="Search for equipments and accessories">
-    <!-- NAVIGATION MENU -->
+    </section>
     <div id="sideNav">
-      <nav>
-        <ul>
-          <li><a href="landing.html">Home</a></li>
-          <li><a href="index.html">Product</a></li>
-          <li><a href="checkout.html">Checkout</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Product</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
     <div id="menuBtn">
-      <img src="menu.png" id="menu" alt="Menu">
+        <img src="menu.png" id="menu" alt="">
     </div>
-  </header>
 
-  <!-- BANNER -->
-  <div id="banner">
-    <div class="slider">
-      <img src="img1.png" alt="Banner 1" class="slide">
-      <img src="img2.png" alt="Banner 2" class="slide">
-      <img src="img3.png" alt="Banner 3" class="slide">
-      <img src="img4.png" alt="Banner 4" class="slide">
-    </div>
-    <a class="prev" onclick="plusSlides(-1)" title="Previous Slide">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)" title="Next Slide">&#10095;</a>
-  </div>
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
 
-  <!-- CATEGORIES -->
-  <div class="Categories">
-    <ul>
-      <li><a href="#" onclick="filterProducts('All')">All</a></li>
-      <li><a href="#" onclick="filterProducts('Sports Equipment')">Sports Equipment</a></li>
-      <li><a href="#" onclick="filterProducts('Activewear')">Activewear</a></li>
-      <li><a href="#" onclick="filterProducts('Accessories')">Accessories</a></li>
-      <li><a href="#" onclick="filterProducts('SportShoes')">SportShoes</a></li>
-    </ul>
-  </div>
-  <div id="product-grid"></div>
-  <script src="data.js"></script>
-  <script src="dashboard.js"></script>
+        sideNav.style.right = "-240px";
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-240px"){
+                sideNav.style.right = "0";
+                menu.src = "close.png";
+            }
+            else{
+                sideNav.style.right = "-240px";
+                menu.src = "menu.png";
+            }
+        }
+
+    </script>
+    
+
 </body>
 </html>
